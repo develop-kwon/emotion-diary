@@ -3,6 +3,7 @@ import { Route, Routes, Link, useNavigate } from 'react-router-dom';
 import New from './pages/New';
 import Diary from './pages/Diary';
 import Home from './pages/Home';
+import Edit from './pages/Edit';
 import NotFound from './pages/NotFound';
 import { getEmotionImage } from './util/get-emtion-image';
 import Button from './components/Button';
@@ -51,6 +52,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/new" element={<New />} />
         <Route path="/diary/:id" element={<Diary />} />
+        <Route path="/edit/:id" element={<Edit />} />
         <Route path="*" element={<NotFound />} />   {/* 위의 3개의 주소가 아니면 해당 페이지를 렌더링한다. */}
       </Routes>
     </>
