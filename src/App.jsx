@@ -86,18 +86,6 @@ function App() {
 
   return (
     <>
-      <button onClick={() => {
-        onCreate(new Date().getTime(), 1, "Hello");
-      }
-      }>일기 추가 테스트</button>
-      <button onClick={() => {
-        onUpdate(1, new Date().getTime(), 1, "수정된 일기입니다.");
-      }
-      }>일기 수정 테스트</button>
-      <button onClick={() => {
-        onDelete(1);
-      }
-      }>일기 삭제 테스트</button>
       <DiaryStateContext.Provider value={data}> {/* state를 공유할 수 있도록 해줌 */}
         <DiaryDispatchContext.Provider value={{ onCreate, onUpdate, onDelete }}>  {/* 기능 공유 */}
           <Routes>    {/* Routes 컴포넌트 안에는 Route 컴포넌트만 들어갈 수 있다. */}
