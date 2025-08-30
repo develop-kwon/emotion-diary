@@ -21,7 +21,7 @@ const DiaryList = ({ data }) => {
             }
         });
     };
-
+    
     const sortedData = getSortedDate();
 
     return (
